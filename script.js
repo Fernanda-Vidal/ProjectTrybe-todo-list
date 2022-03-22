@@ -10,7 +10,7 @@ buttonTask.id = 'criar-tarefa';
 
 sectionInput.appendChild(buttonTask);
 
-
+// Requisito 5 e 6:
 const sectionOl = document.getElementById('lista-tarefas');
 const botao = document.getElementById('criar-tarefa');
 
