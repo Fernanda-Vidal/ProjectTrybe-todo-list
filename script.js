@@ -25,7 +25,9 @@ if (lista.innerText === ''){
     alert('adicione um ítem');
 } else{
 sectionOl.appendChild(lista);
+lista.addEventListener('dblclick', strikeThrough)
 lista.addEventListener('click', switchColor);
+
 }
 
 document.getElementById('texto-tarefa').value = '';
@@ -50,4 +52,21 @@ let getLi = document.getElementsByTagName('li');
   }
 }
 
+// Requisito 9:
+function strikeThrough(event){
+    let eventTask = event.target;
+    let completedClass = 'completed';
+    let liTasksClass = 'liTasks';
+    // let getLi = document.getElementsByTagName('li');
+    
+    // for(let i = 0; i < getLi.length; i += 1){
 
+        if(eventTask.classList == completedClass){
+         eventTask.classList = liTasksClass;
+        }
+        else if (eventTask.classList == liTasksClass) {
+        eventTask.classList = completedClass;
+        
+}
+}
+    

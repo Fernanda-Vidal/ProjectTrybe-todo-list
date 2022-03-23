@@ -5,8 +5,13 @@
     margin-left: 5px;
     background-color: orange;
     color: white;
+
 }
 
 .liTasks {
-    background-color: white;
+    background-color: white;   
+}
+
+.completed {
+    text-decoration: solid line-through black;
 }
