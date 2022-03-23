@@ -18,6 +18,7 @@ const botao = document.getElementById('criar-tarefa');
 function addTask(){
 let lista = document.createElement('li'); 
 let textoInput = document.getElementById('texto-tarefa');
+lista.classList = 'liTasks';
 
 lista.innerText = textoInput.value;
 if (lista.innerText === ''){
@@ -34,8 +35,19 @@ addTask()
 
 botao.addEventListener('click', addTask);
 
-// Requisito 7:
+// Requisito 7 e 8:
 
 function switchColor(event){
+let eventTask = event.target;
+let getLi = document.getElementsByTagName('li');
+
+  for(let i = 0; i < getLi.length; i += 1){
+  if(eventTask.backgroundColor !== 'gray'){
+   getLi[i].style.backgroundColor = 'white';
+  }
     event.target.style.backgroundColor = 'gray';
+   
+  }
 }
+
+
