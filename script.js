@@ -1,15 +1,15 @@
-const sectionInput = document.querySelector('#interage');
+const sectionInterage = document.querySelector('#interage');
 const inputBox = document.createElement('input');
 inputBox.id = 'texto-tarefa';
 
-sectionInput.appendChild(inputBox);
+sectionInterage.appendChild(inputBox);
 
 const buttonTask = document.createElement('button');
 buttonTask.innerText = 'Adicionar';
 buttonTask.id = 'criar-tarefa';
 
 
-sectionInput.appendChild(buttonTask);
+sectionInterage.appendChild(buttonTask);
 
 // Requisito 5 e 6:
 const sectionOl = document.getElementById('lista-tarefas');
@@ -69,4 +69,15 @@ function strikeThrough(event){
         
 }
 }
-    
+
+// Requisito 10 (consultei o código: https://stackoverflow.com/questions/18795028/javascript-remove-li-without-removing-ul)
+let clearAll = document.createElement('button');
+clearAll.id = 'apaga-tudo';
+clearAll.innerText = 'Limpa';
+sectionInterage.appendChild(clearAll);
+clearAll.addEventListener('click', clearLi);
+
+function clearLi (){
+let getOL = document.getElementById('lista-tarefas');
+    getOL.innerHTML = '';
+} 
