@@ -45,11 +45,8 @@ let eventTask = event.target;
 let getLi = document.getElementsByTagName('li');
 
   for(let i = 0; i < getLi.length; i += 1){
-  if(eventTask.backgroundColor !== 'gray'){
-   getLi[i].style.backgroundColor = 'white';
-  }
+    getLi[i].style.backgroundColor = 'white';
     event.target.style.backgroundColor = 'gray';
-   
   }
 }
 
@@ -93,9 +90,8 @@ buttonFinishedRemove.addEventListener('click', finishedRemove);
 function finishedRemove(){
   let getLi = document.querySelectorAll('.completed');
   let getOL = document.getElementById('lista-tarefas');
-//   let classe = 'completed';
     for(let i = 0; i < getLi.length; i += 1){
         getLi[i].remove()   ;
-            // getOL.removeChild(getLi);
+        
         }
 }
