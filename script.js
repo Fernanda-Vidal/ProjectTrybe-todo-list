@@ -5,6 +5,7 @@ inputBox.id = 'texto-tarefa';
 sectionInput.appendChild(inputBox);
 
 const buttonTask = document.createElement('button');
+buttonTask.innerText = 'Adicionar';
 buttonTask.id = 'criar-tarefa';
 
 
@@ -23,11 +24,18 @@ if (lista.innerText === ''){
     alert('adicione um ítem');
 } else{
 sectionOl.appendChild(lista);
+lista.addEventListener('click', switchColor);
 }
 
 document.getElementById('texto-tarefa').value = '';
-
 }
+
 addTask()
 
 botao.addEventListener('click', addTask);
+
+// Requisito 7:
+
+function switchColor(event){
+    event.target.style.backgroundColor = 'gray';
+}
