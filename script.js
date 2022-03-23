@@ -1,3 +1,4 @@
+/* eslint-disable space-before-blocks */
 const sectionInterage = document.querySelector('#interage');
 const inputBox = document.createElement('input');
 inputBox.id = 'texto-tarefa';
@@ -57,7 +58,6 @@ function strikeThrough(event){
     let eventTask = event.target;
     let completedClass = 'completed';
     let liTasksClass = 'liTasks';
-    // let getLi = document.getElementsByTagName('li');
     
     // for(let i = 0; i < getLi.length; i += 1){
 
@@ -71,13 +71,31 @@ function strikeThrough(event){
 }
 
 // Requisito 10 (consultei o código: https://stackoverflow.com/questions/18795028/javascript-remove-li-without-removing-ul)
-let clearAll = document.createElement('button');
-clearAll.id = 'apaga-tudo';
-clearAll.innerText = 'Limpa';
-sectionInterage.appendChild(clearAll);
-clearAll.addEventListener('click', clearLi);
+let buttonClearAll = document.createElement('button');
+buttonClearAll.id = 'apaga-tudo';
+buttonClearAll.innerText = 'Limpa';
+sectionInterage.appendChild(buttonClearAll);
+buttonClearAll.addEventListener('click', clearLi);
 
 function clearLi (){
 let getOL = document.getElementById('lista-tarefas');
     getOL.innerHTML = '';
 } 
+
+// Requisito 11:
+let buttonFinishedRemove = document.createElement('button');
+buttonFinishedRemove.id = 'remover-finalizados';
+buttonFinishedRemove.innerText = 'Remove';
+sectionInterage.appendChild(buttonFinishedRemove);
+buttonFinishedRemove.addEventListener('click', finishedRemove);
+
+
+function finishedRemove(){
+  let getLi = document.querySelectorAll('.completed');
+  let getOL = document.getElementById('lista-tarefas');
+//   let classe = 'completed';
+    for(let i = 0; i < getLi.length; i += 1){
+        getLi[i].remove()   ;
+            // getOL.removeChild(getLi);
+        }
+}

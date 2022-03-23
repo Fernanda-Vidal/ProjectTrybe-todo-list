@@ -18,6 +18,15 @@
 
 }
 
+#remover-finalizados {
+    border: 2px solid orange;
+    width: 100px;
+    height: 20px;
+    margin-left: 5px;
+    background-color: orange;
+    color: white;
+}
+
 .liTasks {
     background-color: white;   
 }
