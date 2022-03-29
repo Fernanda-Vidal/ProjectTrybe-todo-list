@@ -52,14 +52,14 @@ let getLi = document.getElementsByTagName('li');
 
 // Requisito 9:
 function strikeThrough(event){
-    let eventTask = event.target;
+    let eventTask = event.target; 
     let completedClass = 'completed';
-    let liTasksClass = 'liTasks';
+    let liTasksClass = 'liTasks'; 
     
     // for(let i = 0; i < getLi.length; i += 1){
 
-        if(eventTask.classList == completedClass){
-         eventTask.classList = liTasksClass;
+        if(eventTask.classList == completedClass){ 
+         eventTask.classList = liTasksClass; 
         }
         else if (eventTask.classList == liTasksClass) {
         eventTask.classList = completedClass;
@@ -89,7 +89,7 @@ buttonFinishedRemove.addEventListener('click', finishedRemove);
 
 function finishedRemove(){
   let getLi = document.querySelectorAll('.completed');
-  let getOL = document.getElementById('lista-tarefas');
+  // let getOL = document.getElementById('lista-tarefas');
     for(let i = 0; i < getLi.length; i += 1){
         getLi[i].remove()   ;
         
