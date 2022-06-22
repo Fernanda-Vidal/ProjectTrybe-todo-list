@@ -65,6 +65,7 @@ function strikeThrough(event){
         eventTask.classList = completedClass;
         
 }
+saveStorage();
 }
 
 // Requisito 10 (consultei o código: https://stackoverflow.com/questions/18795028/javascript-remove-li-without-removing-ul)
@@ -77,6 +78,7 @@ buttonClearAll.addEventListener('click', clearLi);
 function clearLi (){
 let getOL = document.getElementById('lista-tarefas');
     getOL.innerHTML = '';
+    saveStorage();
 } 
 
 // Requisito 11:
