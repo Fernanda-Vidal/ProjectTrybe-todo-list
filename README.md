@@ -1,6 +1,6 @@
 # Projeto Lista de Tarefas! #vqv 🚀
 
-Projeto realizado no curso de Desenvolvimento Web da Trybe.
+Quarto projeto realizado no Módulo de Fundamentos do curso de Desenvolvimento Web da Trybe.
 
 Toda a estrutura do projeto foi fornecida pela Trybe.
 
