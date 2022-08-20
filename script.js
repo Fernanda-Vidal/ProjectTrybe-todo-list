@@ -22,6 +22,7 @@ let textoInput = document.getElementById('texto-tarefa');
 lista.classList = 'liTasks';
 
 lista.innerText = textoInput.value;
+console.log(textoInput.value);
 if (lista.innerText === ''){
     alert('adicione um ítem');
 } else {
